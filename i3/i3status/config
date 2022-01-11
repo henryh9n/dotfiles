@@ -1,0 +1,28 @@
+general {
+    colors = true
+    interval = 1
+}
+
+order += "volume master"
+order += "cpu_temperature 0"
+order += "cpu_usage"
+order += "time"
+
+time {
+        format = " %Y-%m-%d %H:%M:%S "
+}
+
+volume master {
+        format = " Vol: %volume "
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 1
+}
+
+cpu_temperature 0 {
+        format = " Temp: %degrees°C " 
+}
+
+cpu_usage {
+        format = " CPU: %usage "
+}
